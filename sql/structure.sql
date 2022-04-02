@@ -1,17 +1,16 @@
 --drop table ClienteAgenda;
-
-drop table TipoLancamento;
-drop table Metrica;
-drop table PedidoItem;
-drop table Pedido;
-drop table Lancamento;
-drop table Saldo;
-drop table ProdutoValorPadrao;
-drop table ProdutoValorCliente;
-drop table Produto;
-drop table Produtor;
-drop table Usuario;
-drop table Cliente;
+drop table if exists TipoLancamento;
+drop table if exists Metrica;
+drop table if exists PedidoItem;
+drop table if exists Pedido;
+drop table if exists Lancamento;
+drop table if exists Saldo;
+drop table if exists ProdutoValorPadrao;
+drop table if exists ProdutoValorCliente;
+drop table if exists Produto;
+drop table if exists Produtor;
+drop table if exists Usuario;
+drop table if exists Cliente;
 
 
 
@@ -152,10 +151,14 @@ create table Saldo (
 );
 
 
+drop view if exists vwTabelaValoresProdutorCliente;
 create view vwTabelaValoresProdutorCliente as 
 select 
+        a.Id as ProdutorId,
         a.Nome as Produtor, 
+        b.Id as ClienteId,
         b.Nome as Cliente,
+        c.Id as ProdutoId, 
         c.Nome as Produto, 
         f.Simbolo as Metrica,
         ifnull(d.Valor,e.Valor) Valor
