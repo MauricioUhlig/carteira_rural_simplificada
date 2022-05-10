@@ -16,3 +16,12 @@ insert into ProdutoValorCliente (ClienteId, ProdutoId, Valor) values (1,1, 0.60)
 
 
 select * from vwTabelaValoresProdutorCliente;
+
+insert into Lancamento (ProdutorId, ClienteId, TipoLancamentoId,Valor) values 
+(1,2,1,15.20),
+(1,2,2,10.99),
+(1,2,3,4);
+
+
+
+select * from vwProdutorClienteMovimento;

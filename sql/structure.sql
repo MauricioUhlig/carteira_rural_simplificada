@@ -168,3 +168,14 @@ select
         left join ProdutoValorCliente d on b.Id = d.ClienteId and c.Id = d.ProdutoId
         left join ProdutoValorPadrao e on c.Id = e.ProdutoId
         join Metrica f on c.MetricaId = f.Id;
+
+
+drop view if exists vwProdutorClienteMovimento;
+create view vwProdutorClienteMovimento as 
+select date(Dt_lancamento) as [Data], 
+    ProdutorId, 
+    ClienteId,
+    sum(case when b.Fl_sinal > 0 then valor else -valor end) Movimento
+from Lancamento a 
+    join TipoLancamento b on a.TipoLancamentoId = b.Id
+group by date(Dt_lancamento), ProdutorId, ClienteId;
