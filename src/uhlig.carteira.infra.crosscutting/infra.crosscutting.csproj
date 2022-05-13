@@ -1,13 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <ProjectReference Include="..\uhlig.carteira.domain\domain.csproj" />
-    <ProjectReference Include="..\uhlig.carteira.service\service.csproj" />
-    <ProjectReference Include="..\uhlig.carteira.infra.data\infra.data.csproj" />
-  </ItemGroup>
-
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 </Project>
