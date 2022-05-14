@@ -1,9 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\uhlig.carteira.domain\domain.csproj" />
-    <ProjectReference Include="..\uhlig.carteira.service\service.csproj" />
-    <ProjectReference Include="..\uhlig.carteira.infra.data\infra.data.csproj" />
+    <ProjectReference Include="..\uhlig.sdk.domain\domain.csproj" />
+    <ProjectReference Include="..\uhlig.sdk.service\service.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
