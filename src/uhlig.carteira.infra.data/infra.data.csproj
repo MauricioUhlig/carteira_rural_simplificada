@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\uhlig.carteira.domain\domain.csproj" />
+    <ProjectReference Include="..\..\sdk\uhlig.sdk.domain\sdk.domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

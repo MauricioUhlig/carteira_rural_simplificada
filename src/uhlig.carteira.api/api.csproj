@@ -13,6 +13,8 @@
   <ItemGroup>
     <ProjectReference Include="..\uhlig.carteira.domain\domain.csproj" />
     <ProjectReference Include="..\uhlig.carteira.service\service.csproj" />
+    <ProjectReference Include="..\..\sdk\uhlig.sdk.domain\sdk.domain.csproj" />
+    <ProjectReference Include="..\..\sdk\uhlig.sdk.service\sdk.service.csproj" />
   </ItemGroup>
 
 </Project>

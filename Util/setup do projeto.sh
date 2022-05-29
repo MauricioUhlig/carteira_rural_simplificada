@@ -40,5 +40,20 @@ dotnet add src/uhlig.carteira.service/service.csproj reference src/uhlig.carteir
 dotnet add src/uhlig.carteira.service/service.csproj reference src/uhlig.carteira.infra.data/infra.data.csproj 
 
 
+# Criando referencias ao SDK
+dotnet add src/uhlig.carteira.api/api.csproj reference sdk/uhlig.sdk.domain/domain.csproj 
+dotnet add src/uhlig.carteira.api/api.csproj reference sdk/uhlig.sdk.service/service.csproj 
+
+dotnet add src/uhlig.carteira.infra.crosscutting/infra.crosscutting.csproj reference sdk/uhlig.sdk.domain/domain.csproj 
+dotnet add src/uhlig.carteira.infra.crosscutting/infra.crosscutting.csproj reference sdk/uhlig.sdk.service/service.csproj 
+dotnet add src/uhlig.carteira.infra.crosscutting/infra.crosscutting.csproj reference sdk/uhlig.sdk.infra.data/infra.data.csproj 
+
+dotnet add src/uhlig.carteira.infra.data/infra.data.csproj reference sdk/uhlig.sdk.domain/domain.csproj 
+
+dotnet add src/uhlig.carteira.service/service.csproj reference sdk/uhlig.sdk.domain/domain.csproj 
+dotnet add src/uhlig.carteira.service/service.csproj reference sdk/uhlig.sdk.infra.data/infra.data.csproj 
+
+dotnet add src/uhlig.carteira.domain/domain.csproj reference sdk/uhlig.sdk.domain/domain.csproj
+
 dotnet sln add src/*
 dotnet sln add sdk/*
